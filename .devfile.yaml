@@ -26,7 +26,7 @@ projects:
     git:
       remotes:
         origin: 'https://github.com/NateLove/demo-java.git'
- - name: quarkus-quickstarts
+  - name: quarkus-quickstarts
     git:
       remotes:
         origin: 'https://github.com/NateLove/quarkus-quickstarts.git'
