@@ -12,6 +12,9 @@ components:
     volumeMounts:
     - name: m2
       path: /home/user/.m2
+    env:
+      - name: name
+        value: quarkus-devfile
 - volume:
     size: 4Gi
   name: projects
