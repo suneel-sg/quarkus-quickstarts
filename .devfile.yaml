@@ -21,3 +21,8 @@ components:
 - volume:
     size: 2Gi
   name: m2
+starterProjects:
+  - name: java-demo
+    git:
+      remotes:
+        origin: 'https://github.com/NateLove/demo-java.git'
