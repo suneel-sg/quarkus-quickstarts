@@ -1,32 +1,29 @@
 schemaVersion: 2.2.0
-attributes:
-  controller.devfile.io/storage-type: per-workspace
 metadata:
-  name: nlove-quarkus-demo
+  name: java-quarkus
+  displayName: Quarkus Java
+  description: Quarkus with Java
+  tags:
+    - Java
+    - Quarkus
+  projectType: Quarkus
+  language: Java
 components:
-- name: podman
-  container: 
-    image: 'registry.redhat.io/devspaces/udi-rhel8@sha256:8de469cc9131a42092bd66e0f27a52bbc9b9a449235abf5b900d172a1bd3c985'
-    memoryLimit: 6Gi
-    mountSources: true
-    volumeMounts:
-    - name: m2
-      path: /home/user/.m2
-    env:
-      - name: name
-        value: quarkus-devfile
-- volume:
-    size: 4Gi
-  name: projects
-- volume:
-    size: 2Gi
-  name: m2
-projects:
-  - name: java-demo
-    git:
-      remotes:
-        origin: 'https://github.com/NateLove/demo-java.git'
-  - name: quarkus-quickstarts
-    git:
-      remotes:
-        origin: 'https://github.com/NateLove/quarkus-quickstarts.git'
+  - name: image-build
+    container:
+      sourceMapping: /projects
+      memoryLimit: 8Gi
+      memoryRequest: 512Mi
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+      image: java-quarkus-image:latest
+      endpoints:
+        - exposure: public
+          name: quarkus-dev
+          targetPort: 8080
+          protocol: https
+  - name: m2
+    volume:
+      size: 2Gi
+
