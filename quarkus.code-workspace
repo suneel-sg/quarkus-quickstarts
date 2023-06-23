@@ -7,5 +7,15 @@
             "path": "."
         }
     ],
-    "settings": {}
+    "settings": {},
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "redhat.vscode-yaml",
+            "redhat.vscode-quarkus",
+            "cnshenj.vscode-task-manager",
+            "redhat.vscode-openshift-connector",
+            "redhat.vscode-xml"
+    ]
+    }
 }
