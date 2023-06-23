@@ -16,6 +16,11 @@ components:
           name: quarkus-dev
           targetPort: 8080
           protocol: https
+        - exposure: public
+          name: swagger-ui
+          targetPort: 8080
+          protocol: https
+          path: /q/swagger-ui
   - name: m2
     volume:
       size: 2Gi
