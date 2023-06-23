@@ -22,8 +22,6 @@ components:
           protocol: https
           path: /q/swagger-ui
       env:
-        - name: SHELL
-          value: /bin/zsh
         - name: CHE_PLUGIN_REGISTRY_URL
           value: https://open-vsx.org
   - name: m2
