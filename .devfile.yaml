@@ -10,8 +10,8 @@ components:
       volumeMounts:
         - name: m2
           path: /home/user/.m2
-      #image: areartifactory.afrcdev.scotland.gov.uk:8081/are-docker-registry/devspaces/udi-rhel8
-      image: registry.redhat.io/are-docker-registry/devspaces/udi-rhel8
+      image: areartifactory.afrcdev.scotland.gov.uk:8081/are-docker-registry/devspaces/udi-rhel8
+      #image: registry.redhat.io/are-docker-registry/devspaces/udi-rhel8
       endpoints:
         - exposure: public
           name: quarkus-dev
